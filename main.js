@@ -4,14 +4,34 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
-const loveHearts = document.querySelector("like-glyph");
 
-console.log(loveHearts)
-// loveHearts.addEventListener("click", heartCall);
+/* function testFunction(loveHearts) {
+  const butHeart = document.querySelector(".like-glyph");
+
+  butHeart.addEventListener("click",heartCall)
+}
+ */
+// console.log(loveHearts);
 
 //class to the error modal in the HTML so it does not appear when the page first loads
 
 // *******changed the html to add class = hidden***************
+
+//Set up an event listener to respond to a user action
+
+const loverHearts = document.querySelector(".like-glyph")
+
+function glyphHearts() {
+loverHearts.addEventListener("click", heartCall);
+};
+
+glyphHearts()
+
+function handleButtonClick(toClick){
+
+}
+
+
 
 
 //Submit a request to a mocked-up server
@@ -38,10 +58,8 @@ function heartCall(e) {
 }
 
 
-//Set up an event listener to respond to a user action
-// for (const glyph of loveHearts) {
-// loveHearts.addEventListener("click", heartCall);
-// }
+
+
 
 // Update the DOM based on the mock server's response
 
