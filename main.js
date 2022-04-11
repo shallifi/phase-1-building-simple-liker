@@ -1,3 +1,4 @@
+  
 // Defining text characters for the empty and full hearts for you to use later.
 const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
@@ -7,7 +8,6 @@ const FULL_HEART = '♥'
 
 /* function testFunction(loveHearts) {
   const butHeart = document.querySelector(".like-glyph");
-
   butHeart.addEventListener("click",heartCall)
 }
  */
@@ -19,18 +19,15 @@ const FULL_HEART = '♥'
 
 //Set up an event listener to respond to a user action
 
-const loverHearts = document.querySelector(".like-glyph")
+// loverHearts.addEventListener("click", heartCall);
 
-function glyphHearts() {
-loverHearts.addEventListener("click", heartCall);
-};
 
-glyphHearts()
 
-function handleButtonClick(toClick){
-
-}
-
+// function handleButtonClick(toClick){
+  
+  // }
+  
+  const loverHearts = document.querySelectorAll(".like-glyph")
 
 
 
@@ -57,7 +54,9 @@ function heartCall(e) {
   });
 }
 
-
+for (const glyph of loverHearts) {
+  glyph.addEventListener("click", heartCall);
+}
 
 
 
@@ -68,14 +67,6 @@ function heartCall(e) {
 
 
 
-
-//////////////////////////////////////////////////
-
-// const modal = document.getElementById("modal")
-//   .addEventListener('click', function() {
-//   modal.hidden("please") = true;
-//   modal.hidden("it is wrong") = false;
-// }, false);
 
 //------------------------------------------------------------------------------
 // Don't change the code below: this function mocks the server response
